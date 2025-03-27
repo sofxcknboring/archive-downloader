@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  fastapi_app:
+    build: .
+    container_name: templink-generator-api
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - /mnt/photosync:/app/source
+      - /mnt/photosync/archives:/app/archives
+    ports:
+      - "8000:8000"
