@@ -7,6 +7,6 @@ services:
       - .env
     volumes:
       - /mnt/photosync:/app/source
-      - /mnt/photosync/prod/archives:/app/archives
+      - /mnt/photosync/dev/archives:/app/archives
     ports:
       - "8000:8000"
